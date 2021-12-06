@@ -6,7 +6,7 @@
   --light-blue: #1f93ff;
 
   --color-white: #fff;
-  --dark-text: #333;
+  --color-dark: #333;
 
   --color-grey: #eae6eb;
   --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -46,49 +46,20 @@ section {
 
 /* UTILITY CLASSES */
 
-/* Heading */
-.--text-lg {
-  font-size: 4.5rem;
-  font-weight: 500;
-  line-height: 1.4;
-  color: #fff;
-}
-
-.--text-md {
-  font-size: 3.5rem;
-  font-weight: 500;
-  line-height: 1.4;
-  color: #fff;
-}
-
-.--text-sm {
-  font-size: 1.3rem;
-  line-height: 1.4;
-  font-weight: 300;
-  color: #fff;
-}
-
-.--text-p {
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1.4;
-  color: #fff;
-}
-
-/* Text Color */
-.--text-dark {
-  color: var(--dark-text);
-}
-
-/* Center Text */
-.--text-center {
-  text-align: center;
-}
-
 /* Flex */
 .--flex-center {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.--flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.--flex-end {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -96,14 +67,64 @@ section {
   flex-direction: column;
 }
 
+.--100vh {
+  height: 100vh;
+}
+
 /* Center All */
 .--center-all {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   width: 100%;
   margin: auto;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+}
+
+/* Heading */
+.--text-lg {
+  font-size: 4.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-dark);
+}
+
+.--text-md {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-dark);
+}
+
+.--text-sm {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: var(--color-dark);
+}
+
+.--text-p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-dark);
+}
+
+.--fw-bold {
+  font-weight: 600;
+}
+.--fw-thin {
+  font-weight: 200;
+}
+
+/* Text Color */
+.--text-light {
+  color: #fff;
+}
+
+/* Center Text */
+.--text-center {
   text-align: center;
 }
 
@@ -119,6 +140,12 @@ section {
 .--m {
   margin: 1rem;
 }
+.--ml {
+  margin-left: 1rem;
+}
+.--mr {
+  margin-right: 1rem;
+}
 
 .--mb {
   margin-bottom: 1rem;
@@ -127,9 +154,19 @@ section {
 .--my {
   margin: 1rem 0;
 }
+.--mx {
+  margin: 0 1rem;
+}
 
 .--m2 {
   margin: rem;
+}
+
+.--ml2 {
+  margin: 2rem;
+}
+.--mr2 {
+  margin: 2rem;
 }
 
 .--mb2 {
@@ -138,6 +175,10 @@ section {
 
 .--my2 {
   margin: 2rem 0;
+}
+
+.--mx2 {
+  margin: 0 2rem;
 }
 
 /* Padding */
@@ -149,9 +190,9 @@ section {
 }
 
 .--btn {
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding: 8px 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 6px 8px;
   margin: 0 5px;
   border: 1px solid transparent;
   border-radius: 3px;
@@ -159,6 +200,15 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
+}
+
+.--btn:hover {
+  transform: translateY(-2px);
+}
+
+.--btn-lg {
+  padding: 8px 10px;
 }
 
 .--btn-block {
@@ -169,6 +219,11 @@ section {
   color: #fff;
   background: #007bff;
 }
+.--btn-secondary {
+  color: #fff;
+  border: 1px solid #fff;
+  background: transparent;
+}
 .--btn-danger {
   color: #fff;
   background: orangered;
@@ -177,4 +232,12 @@ section {
 .--btn-success {
   color: #fff;
   background: #28a745;
+}
+
+/* Background */
+.--bg-light {
+  background: #fff;
+}
+.--bg-dark {
+  background: var(--color-dark);
 }
