@@ -62,6 +62,11 @@ section {
   justify-content: flex-end;
   align-items: center;
 }
+.--flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .--dir-column {
   flex-direction: column;
@@ -187,6 +192,12 @@ section {
 }
 .--p2 {
   padding: 2rem;
+}
+.--py {
+  padding: 1rem 0;
+}
+.--py2 {
+  padding: 2rem 0;
 }
 
 .--btn {
