@@ -128,6 +128,20 @@ section {
   color: #fff;
 }
 
+.--color-primary {
+  color: #007bff;
+}
+.--color-danger {
+  color: orangered;
+}
+.--color-success {
+  color: #28a745;
+}
+
+.--color-white {
+  color: #fff;
+}
+
 /* Center Text */
 .--text-center {
   text-align: center;
@@ -251,4 +265,47 @@ section {
 }
 .--bg-dark {
   background: var(--color-dark);
+}
+
+.--form-control {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.--form-control input {
+  padding: 5px 1rem;
+  border: 1px solid #777;
+  border-radius: 3px;
+  outline: none;
+}
+.--form-control select {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 5px 1rem;
+  border: 1px solid #777;
+  border-radius: 3px;
+}
+
+.--form-control label {
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: inline-block;
+  min-width: 7rem;
+  color: var(--color-dark);
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .--flex-center {
+    flex-direction: column;
+  }
+  .--flex-start {
+    flex-direction: column;
+  }
+  .--flex-end {
+    flex-direction: column;
+  }
+  .--flex-between {
+    flex-direction: column;
+  }
 }
