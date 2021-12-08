@@ -88,15 +88,21 @@ section {
 }
 
 /* Heading */
-.--text-lg {
+.--text-xl {
   font-size: 4.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-dark);
+}
+.--text-lg {
+  font-size: 4rem;
   font-weight: 500;
   line-height: 1.4;
   color: var(--color-dark);
 }
 
 .--text-md {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 500;
   line-height: 1.4;
   color: var(--color-dark);
@@ -272,8 +278,14 @@ section {
   font-weight: 300;
 }
 
+.--form-control > * {
+  margin: 5px 0;
+}
+
 .--form-control input {
-  padding: 5px 1rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding: 8px 1rem;
   border: 1px solid #777;
   border-radius: 3px;
   outline: none;
@@ -281,7 +293,7 @@ section {
 .--form-control select {
   font-size: 1.4rem;
   font-weight: 400;
-  padding: 5px 1rem;
+  padding: 8px 1rem;
   border: 1px solid #777;
   border-radius: 3px;
 }
@@ -308,4 +320,15 @@ section {
   .--flex-between {
     flex-direction: column;
   }
+}
+
+.--block {
+  display: block;
+}
+.--inline-block {
+  display: inline-block;
+}
+
+.--width-100 {
+  width: 100%;
 }
