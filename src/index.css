@@ -54,7 +54,7 @@ section {
 }
 .--flex-start {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 .--flex-end {
@@ -241,7 +241,7 @@ p {
   font-size: 1.6rem;
   font-weight: 400;
   padding: 6px 8px;
-  margin: 0 5px;
+  margin: 0 5px 0 0;
   border: 1px solid transparent;
   border-radius: 3px;
   cursor: pointer;
