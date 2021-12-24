@@ -72,6 +72,10 @@ section {
   flex-direction: column;
 }
 
+.--flex-dir-column {
+  display: flex;
+}
+
 .--100vh {
   height: 100vh;
 }
@@ -324,20 +328,11 @@ p {
   margin-right: 1rem;
 }
 
-/* @media screen and (max-width: 600px) {
-  .--flex-center {
+@media screen and (max-width: 600px) {
+  .--flex-dir-column {
     flex-direction: column;
   }
-  .--flex-start {
-    flex-direction: column;
-  }
-  .--flex-end {
-    flex-direction: column;
-  }
-  .--flex-between {
-    flex-direction: column;
-  }
-} */
+}
 
 .--block {
   display: block;
