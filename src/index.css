@@ -324,7 +324,7 @@ p {
   margin-right: 1rem;
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .--flex-center {
     flex-direction: column;
   }
@@ -337,7 +337,7 @@ p {
   .--flex-between {
     flex-direction: column;
   }
-}
+} */
 
 .--block {
   display: block;
