@@ -205,14 +205,14 @@ p {
 }
 
 .--m2 {
-  margin: rem;
+  margin: 2rem;
 }
 
 .--ml2 {
-  margin: 2rem;
+  margin-left: 2rem;
 }
 .--mr2 {
-  margin: 2rem;
+  margin-right: 2rem;
 }
 
 .--mb2 {
@@ -239,6 +239,12 @@ p {
 }
 .--py2 {
   padding: 2rem 0;
+}
+.--px {
+  padding: 0 1rem;
+}
+.--px2 {
+  padding: 0 2rem;
 }
 
 .--btn {
@@ -292,6 +298,15 @@ p {
 }
 .--bg-dark {
   background: var(--color-dark);
+}
+.--bg-primary {
+  background: var(--color-primary);
+}
+.--bg-success {
+  background: var(--color-success);
+}
+.--bg-success {
+  background: var(--color-success);
 }
 
 .--form-control {
