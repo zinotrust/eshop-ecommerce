@@ -80,6 +80,13 @@ section {
   height: 100vh;
 }
 
+/* Grid */
+.--grid-15 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  row-gap: 1rem;
+}
+
 /* Center All */
 .--center-all {
   display: flex;
@@ -305,8 +312,8 @@ p {
 .--bg-success {
   background: var(--color-success);
 }
-.--bg-success {
-  background: var(--color-success);
+.--bg-grey {
+  background: var(--color-grey);
 }
 
 .--form-control {
