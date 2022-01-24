@@ -369,7 +369,6 @@ p {
 
 .--line {
   position: relative;
-  margin-bottom: 1rem;
 }
 .--line::after {
   content: "";
@@ -379,6 +378,7 @@ p {
   transform: translateX(-50%);
   width: 5rem;
   height: 3px;
+  margin-bottom: 1rem;
 
   background: rgb(217, 8, 170);
   background: linear-gradient(
