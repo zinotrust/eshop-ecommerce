@@ -8,7 +8,7 @@
   --color-white: #fff;
   --color-dark: #333;
 
-  --color-grey: #eae6eb;
+  --color-grey: #eee;
   --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
   --color-purple: #9d0191;
@@ -85,6 +85,13 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   row-gap: 1rem;
+  column-gap: 1rem;
+}
+.--grid-25 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  row-gap: 1rem;
+  column-gap: 1rem;
 }
 
 /* Center All */
