@@ -80,6 +80,10 @@ section {
   height: 100vh;
 }
 
+.--mh-100vh {
+  min-height: 100vh;
+}
+
 /* Grid */
 .--grid-15 {
   display: grid;
@@ -372,6 +376,10 @@ p {
 
 .--width-100 {
   width: 100%;
+}
+
+.--width-500px {
+  width: 500px;
 }
 
 .--line {
