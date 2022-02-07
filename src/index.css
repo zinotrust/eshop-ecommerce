@@ -76,6 +76,11 @@ section {
   display: flex;
 }
 
+.--align-center {
+  display: flex;
+  align-items: center;
+}
+
 .--100vh {
   height: 100vh;
 }
