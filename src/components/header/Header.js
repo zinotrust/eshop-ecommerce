@@ -1,8 +1,12 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
-import { FaShoppingCart, FaTimes } from "react-icons/fa";
+import { FaShoppingCart, FaTimes, FaUserCircle } from "react-icons/fa";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { auth } from "../../firebase/config";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { toast } from "react-toastify";
+import { useEffect } from "react";
 
 const logo = (
   <div className={styles.logo}>
@@ -28,6 +32,21 @@ const activeLink = ({ isActive }) => (isActive ? `${styles.active}` : "");
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [displayName, setdisplayName] = useState("");
+  const navigate = useNavigate();
+
+  // Monitor currently sign in user
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        console.log(user.displayName);
+        setdisplayName(user.displayName);
+      } else {
+        setdisplayName("");
+      }
+    });
+  }, []);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -35,6 +54,17 @@ const Header = () => {
 
   const hideMenu = () => {
     setShowMenu(false);
+  };
+
+  const logoutUser = () => {
+    signOut(auth)
+      .then(() => {
+        toast.success("Logout successfully.");
+        navigate("/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
   };
 
   return (
@@ -77,11 +107,18 @@ const Header = () => {
               <NavLink to="/login" className={activeLink}>
                 Login
               </NavLink>
+              <a href="#">
+                <FaUserCircle size={16} />
+                Hi, {displayName}
+              </a>
               <NavLink to="/register" className={activeLink}>
                 Register
               </NavLink>
               <NavLink to="/order-history" className={activeLink}>
                 My Orders
+              </NavLink>
+              <NavLink to="/" onClick={logoutUser}>
+                Logout
               </NavLink>
             </span>
             {cart}
