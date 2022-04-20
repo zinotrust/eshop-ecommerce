@@ -1,21 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-// Pages
-import { Home, Contact } from "./pages/index";
-// Components
-import { Header, Footer } from "./components/index";
+import "./App.scss";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </>
+    <div>
+      <h1>Hello World!!!</h1>
+    </div>
   );
 }
 
