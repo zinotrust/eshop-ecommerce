@@ -1,0 +1,50 @@
+.product {
+  display: flex;
+  position: relative;
+
+  .filter {
+    width: 20%;
+    // border: 2px solid var(--dark-blue);
+    transition: all 0.3s;
+  }
+
+  .content {
+    width: 80%;
+    padding-left: 5px;
+    position: relative;
+    .icon {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+
+      & > * {
+        padding-left: 5px;
+      }
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .filter {
+      width: 50%;
+      background-color: #fff;
+      border: 2px solid var(--dark-blue);
+      position: absolute;
+      left: -200%;
+      height: 100%;
+      padding: 1rem;
+      z-index: 99;
+    }
+    .show {
+      left: 0;
+    }
+    .content {
+      width: 100%;
+      .icon {
+        display: flex;
+      }
+    }
+  }
+}
