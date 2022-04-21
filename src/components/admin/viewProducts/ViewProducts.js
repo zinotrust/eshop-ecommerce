@@ -86,8 +86,8 @@ const ViewProducts = () => {
             {products.map((product, index) => {
               const { id, name, price, imageURL, category } = product;
               return (
-                <tbody>
-                  <tr key={id}>
+                <tbody key={id}>
+                  <tr>
                     <td>{index + 1}</td>
                     <td>
                       <img
