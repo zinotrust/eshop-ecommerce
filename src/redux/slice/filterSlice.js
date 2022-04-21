@@ -50,10 +50,45 @@ const filterSlice = createSlice({
 
       state.filteredProducts = tempProducts;
     },
+    FILTER_BY_CATEGORY(state, action) {
+      const { products, category } = action.payload;
+      let tempProducts = [];
+      if (category === "All") {
+        tempProducts = products;
+      } else {
+        tempProducts = products.filter(
+          (product) => product.category === category
+        );
+      }
+      state.filteredProducts = tempProducts;
+    },
+    FILTER_BY_BRAND(state, action) {
+      const { products, brand } = action.payload;
+      let tempProducts = [];
+      if (brand === "All") {
+        tempProducts = products;
+      } else {
+        tempProducts = products.filter((product) => product.brand === brand);
+      }
+      state.filteredProducts = tempProducts;
+    },
+    FILTER_BY_PRICE(state, action) {
+      const { products, price } = action.payload;
+      let tempProducts = [];
+      tempProducts = products.filter((product) => product.price <= price);
+
+      state.filteredProducts = tempProducts;
+    },
   },
 });
 
-export const { FILTER_BY_SEARCH, SORT_PRODUCTS } = filterSlice.actions;
+export const {
+  FILTER_BY_SEARCH,
+  SORT_PRODUCTS,
+  FILTER_BY_CATEGORY,
+  FILTER_BY_BRAND,
+  FILTER_BY_PRICE,
+} = filterSlice.actions;
 
 export const selectFilteredProducts = (state) => state.filter.filteredProducts;
 
