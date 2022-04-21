@@ -1,0 +1,59 @@
+.filter {
+  h4 {
+    margin-top: 1rem;
+  }
+  .category button {
+    display: block;
+    text-align: left;
+    width: 80%;
+    height: 3rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    // margin-bottom: 5px;
+    border-bottom: 1px solid #777;
+  }
+
+  .brand {
+    select {
+      font-size: 1.6rem;
+      font-weight: 300;
+      padding: 5px;
+
+      width: 80%;
+      border: 1px solid #777;
+      border-radius: 3px;
+      outline: none;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .filter {
+    .category button {
+      width: 100%;
+    }
+    .brand {
+      select {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.active {
+  position: relative;
+  // margin-bottom: 2px;
+  padding-left: 1rem;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--color-danger);
+}
