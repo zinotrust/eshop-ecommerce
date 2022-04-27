@@ -83,11 +83,11 @@ const ViewProducts = () => {
                 <th>Actions</th>
               </tr>
             </thead>
-            {products.map((product, index) => {
-              const { id, name, price, imageURL, category } = product;
-              return (
-                <tbody key={id}>
-                  <tr>
+            <tbody>
+              {products.map((product, index) => {
+                const { id, name, price, imageURL, category } = product;
+                return (
+                  <tr key={id}>
                     <td>{index + 1}</td>
                     <td>
                       <img
@@ -111,9 +111,9 @@ const ViewProducts = () => {
                       />
                     </td>
                   </tr>
-                </tbody>
-              );
-            })}
+                );
+              })}
+            </tbody>
           </table>
         )}
       </div>

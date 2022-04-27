@@ -1,0 +1,36 @@
+.pagination {
+  list-style: none;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #ccc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hidden {
+    display: none;
+  }
+
+  li {
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    min-width: 3rem;
+    height: 3rem;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  p {
+    margin-left: 1rem;
+    .page {
+      color: var(--color-danger);
+    }
+  }
+}
+.active {
+  background-color: var(--color-danger);
+  color: #fff;
+}
