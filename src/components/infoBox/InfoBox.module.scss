@@ -1,0 +1,19 @@
+.info-box {
+  width: 100%;
+  max-width: 25rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+
+  .card {
+    border: 1px solid #ccc;
+    border-bottom: 3px solid var(--light-blue);
+    padding: 5px;
+    background-color: #f5f6fa;
+  }
+
+  span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

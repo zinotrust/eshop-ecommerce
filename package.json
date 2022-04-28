@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@reduxjs/toolkit": "^1.8.1",
     "@stripe/react-stripe-js": "^1.7.2",
     "@stripe/stripe-js": "^1.29.0",
@@ -16,6 +17,7 @@
     "node-sass": "^6.0.1",
     "notiflix": "^3.2.5",
     "react": "^17.0.2",
+    "react-chartjs-2": "^4.1.0",
     "react-country-region-selector": "^3.4.0",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",

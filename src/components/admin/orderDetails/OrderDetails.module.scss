@@ -32,19 +32,41 @@
 
     tr {
       border-bottom: 1px solid #ccc;
-      cursor: pointer;
     }
 
     tr:nth-child(even) {
       background-color: #eee;
     }
-    .pending {
-      color: orangered;
-      font-weight: 500;
+  }
+  .summary {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    .card {
+      padding: 1rem;
+      .text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3 {
+          color: var(--color-danger);
+        }
+      }
+      button {
+        margin-top: 5px;
+      }
     }
-    .delivered {
-      color: green;
-      font-weight: 500;
-    }
+  }
+}
+.count {
+  display: flex;
+  align-items: center;
+  button {
+    border: 1px solid var(--darkblue);
+  }
+  & > * {
+    margin-right: 1rem;
   }
 }

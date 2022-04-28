@@ -1,0 +1,9 @@
+.charts {
+  width: 100%;
+  max-width: 500px;
+  .card {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-bottom: 3px solid var(--color-danger);
+  }
+}

@@ -1,0 +1,23 @@
+.status {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem 0;
+  .card {
+    padding: 1rem;
+    border: 2px solid var(--light-blue);
+  }
+
+  form {
+    select {
+      display: inline-block;
+      font-size: 1.6rem;
+      font-weight: 300;
+      padding: 1rem;
+      margin: 1rem auto;
+      width: 100%;
+      border: 1px solid #777;
+      border-radius: 3px;
+      outline: none;
+    }
+  }
+}
