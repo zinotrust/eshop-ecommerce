@@ -11,7 +11,7 @@ const path = require("path");
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("build"));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname.at, "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
 }
 
@@ -36,7 +36,7 @@ const calculateOrderAmount = (items) => {
 app.post("/create-payment-intent", async (req, res) => {
   const { items, shipping, description } = req.body;
 
-  // Create a PaymentIntent with the order amount and currency.
+  // Create a PaymentIntent with the order amount and currency
   const paymentIntent = await stripe.paymentIntents.create({
     amount: calculateOrderAmount(items),
     currency: "usd",
