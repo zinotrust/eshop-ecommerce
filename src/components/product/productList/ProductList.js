@@ -20,7 +20,7 @@ const ProductList = ({ products }) => {
 
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage, setProductsPerPage] = useState(9);
+  const [productsPerPage] = useState(9);
   // Get Current Products
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -86,13 +86,13 @@ const ProductList = ({ products }) => {
             })}
           </>
         )}
+        <Pagination
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          productsPerPage={productsPerPage}
+          totalProducts={filteredProducts.length}
+        />
       </div>
-      <Pagination
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        productsPerPage={productsPerPage}
-        totalProducts={filteredProducts.length}
-      />
     </div>
   );
 };

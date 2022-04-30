@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { selectUserID, selectUserName } from "../../redux/slice/authSlice";
-import { selectProducts } from "../../redux/slice/productSlice";
 import Card from "../card/Card";
 import styles from "./ReviewProducts.module.scss";
 import StarsRating from "react-star-rate";
@@ -18,7 +17,6 @@ const ReviewProducts = () => {
   const [product, setProduct] = useState(null);
   const { id } = useParams();
   const { document } = useFetchDocument("products", id);
-  const products = useSelector(selectProducts);
   const userID = useSelector(selectUserID);
   const userName = useSelector(selectUserName);
 

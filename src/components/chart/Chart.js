@@ -43,7 +43,7 @@ const Chart = () => {
   const array = [];
   orders.map((item) => {
     const { orderStatus } = item;
-    array.push(orderStatus);
+    return array.push(orderStatus);
   });
 
   const getOrderCount = (arr, value) => {

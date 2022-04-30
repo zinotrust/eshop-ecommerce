@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import useFetchCollection from "../../../customHooks/useFetchCollection";
-import { selectUserID } from "../../../redux/slice/authSlice";
+
 import {
   selectOrderHistory,
   STORE_ORDERS,
@@ -13,7 +13,6 @@ import styles from "./Orders.module.scss";
 const Orders = () => {
   const { data, isLoading } = useFetchCollection("orders");
   const orders = useSelector(selectOrderHistory);
-  const userID = useSelector(selectUserID);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();

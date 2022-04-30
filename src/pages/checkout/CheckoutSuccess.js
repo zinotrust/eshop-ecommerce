@@ -1,8 +1,4 @@
-import { addDoc, collection } from "firebase/firestore";
-import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
-import { db } from "../../firebase/config";
 
 const CheckoutSuccess = () => {
   return (
